@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: cz.cvut.kbss.ear.race.dao.UserDaoTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.565 s <<< FAILURE! - in cz.cvut.kbss.ear.race.dao.UserDaoTest
+findByUsernameReturnsPersonWithMatchingUsername  Time elapsed: 0.009 s  <<< ERROR!
+javax.persistence.PersistenceException: 
+Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Pro sloupec "AGE" není hodnota NULL povolena
+NULL not allowed for column "AGE"; SQL statement:
+INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?) [23502-200]
+Error Code: 23502
+Call: INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [2, null, null, FirstName-279659383, LastName860898448, -1057836381, GUEST, username853212763@kbss.felk.cvut.cz]
+Query: InsertObjectQuery(User{FirstName-279659383 LastName860898448(username853212763@kbss.felk.cvut.cz)})
+	at cz.cvut.kbss.ear.race.dao.UserDaoTest.findByUsernameReturnsPersonWithMatchingUsername(UserDaoTest.java:35)
+Caused by: org.eclipse.persistence.exceptions.DatabaseException: 
+
+Internal Exception: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Pro sloupec "AGE" není hodnota NULL povolena
+NULL not allowed for column "AGE"; SQL statement:
+INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?) [23502-200]
+Error Code: 23502
+Call: INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [2, null, null, FirstName-279659383, LastName860898448, -1057836381, GUEST, username853212763@kbss.felk.cvut.cz]
+Query: InsertObjectQuery(User{FirstName-279659383 LastName860898448(username853212763@kbss.felk.cvut.cz)})
+	at cz.cvut.kbss.ear.race.dao.UserDaoTest.findByUsernameReturnsPersonWithMatchingUsername(UserDaoTest.java:35)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: 
+Pro sloupec "AGE" není hodnota NULL povolena
+NULL not allowed for column "AGE"; SQL statement:
+INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?) [23502-200]
+	at cz.cvut.kbss.ear.race.dao.UserDaoTest.findByUsernameReturnsPersonWithMatchingUsername(UserDaoTest.java:35)
+

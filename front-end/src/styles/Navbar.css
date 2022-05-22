@@ -1,0 +1,51 @@
+.links {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.links a {
+    display: inline-block;
+    outline: none;
+    border-width: 0px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: 500;
+    max-width: 100%;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.1s ease-out 0s, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38) 0s;
+    background: rgb(0, 82, 204);
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    padding: 0px 12px;
+    vertical-align: middle;
+    width: auto;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.links a:hover {
+    background: rgb(0, 101, 255);
+    text-decoration: inherit;
+    transition-duration: 0s, 0.15s;
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 600px) {
+    .links{
+        flex-direction: column;
+    }
+    .links a {
+        width: 100%;
+    }
+
+    .menu-button{
+        display: inline-block;
+    }
+}
